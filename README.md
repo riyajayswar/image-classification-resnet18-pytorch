@@ -277,6 +277,8 @@ Download the following annotation files:
 - instances_train2017.json
 - instances_val2017.json
 
+The annotation files can be downloaded from the official COCO 2017 dataset or from the Kaggle COCO 2017 dataset.
+
 Place them inside:
 
 ```text
