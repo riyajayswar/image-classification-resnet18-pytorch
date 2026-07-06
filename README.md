@@ -294,7 +294,16 @@ python download_images.py
 python create_labels.py
 ```
 
-This will automatically prepare the dataset and generate the label files.
+This will automatically generate:
+
+```text
+train_files.txt
+val_files.txt
+train_labels.json
+val_labels.json
+```
+
+These files are generated locally and are not included in the repository.
 
 # 🏋️ Train the Model
 
