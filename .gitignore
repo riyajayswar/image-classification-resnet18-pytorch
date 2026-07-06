@@ -25,11 +25,19 @@ Thumbs.db
 # -------------------------
 # Ignore COCO dataset
 # -------------------------
-data/train2017/
-data/val2017/
-data/annotations/
 
-# Keep folders
+# Ignore contents, not the folders
+data/train2017/*
+data/val2017/*
+data/annotations/*
+
+# Keep the folders
 !data/train2017/.gitkeep
 !data/val2017/.gitkeep
 !data/annotations/.gitkeep
+
+# Generated files
+train_files.txt
+val_files.txt
+train_labels.json
+val_labels.json

@@ -28,6 +28,18 @@ The workflow includes:
 
 ---
 
+# 🚀 Project Highlights
+
+- Transfer Learning using pretrained ResNet-18
+- Custom subset of the COCO 2017 dataset
+- Automatic dataset preparation pipeline
+- Custom PyTorch Dataset and DataLoader
+- Achieved **80.5% validation accuracy**
+- Saved best model checkpoint
+- Prediction on unseen images
+
+---
+
 # 🎯 Objective
 
 To build an image classification model capable of recognizing the following five object categories:
@@ -125,7 +137,7 @@ Dataset Size
 # 📁 Project Structure
 
 ```text
-Task3_ResNet18_COCO
+image-classification-resnet18-pytorch
 │
 ├── data/
 │   ├── annotations/
@@ -206,13 +218,13 @@ Predict New Images
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/riyajayswar/Task3_ResNet18_COCO.git
+git clone https://github.com/riyajayswar/image-classification-resnet18-pytorch.git
 ```
 
 Move into the project directory.
 
 ```bash
-cd Task3_ResNet18_COCO
+cd image-classification-resnet18-pytorch
 ```
 
 ---
@@ -258,17 +270,20 @@ data/
 └── val2017/
 ```
 
-### Step 2: Download COCO 2017 annotations
+### Step 2: Download COCO 2017 Annotation Files
 
-Download:
+Download the following annotation files:
 
-- `instances_train2017.json`
-- `instances_val2017.json`
+- instances_train2017.json
+- instances_val2017.json
 
-Extract them into:
+Place them inside:
 
 ```text
-data/annotations/
+data/
+└── annotations/
+    ├── instances_train2017.json
+    └── instances_val2017.json
 ```
 
 ### Step 3: Run
@@ -286,6 +301,14 @@ This will automatically prepare the dataset and generate the label files.
 ```bash
 python train.py
 ```
+Training Complete!
+Best Validation Accuracy: 80.50%
+
+Generated:
+best_model.pth
+loss.png
+accuracy.png
+
 
 The script will:
 
@@ -348,6 +371,13 @@ Prediction: Person
 - Add Classification Report
 - Build a Streamlit web application
 - Deploy the model
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+See the LICENSE file for details.
 
 ---
 
